@@ -24,7 +24,7 @@
   width: 100%;
   height: 100%;
   padding: 0;
-  animation: pulse 7s infinite;
+  animation: pulse 4s infinite;
 }
 
 @keyframes pulse {
@@ -175,7 +175,26 @@ body {
     p{
     margin-top: 10px;
     }
-  </style>
+    
+.bar-wrapper { 
+float: right;
+height: 100px; 
+position: relative; 
+padding-bottom: 150px;  
+margin-bottom: 20px;
+margin-right: 300px;     
+   
+} 
+.bar { 
+position: relative; 
+bottom: 0; 
+width: 5px; 
+display: inline-block; 
+border: 1px solid red; 
+height: 5px; 
+border-bottom: 3px solid #fff; 
+} 
+</style>
 </head>
     
 <body style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -187,20 +206,17 @@ body {
       font-size: 16px;
       line-height: 1.375;">
 
-
-
   <!-- Header -->
-
   <div class="header">
   <div class="element">
   <h1>DJ Fuchs</h1>
   <h2>Ready for the grind!</h2>
   </div><!--element--> 
-  </div> <!--header -->  
-  
-  
-  <div class="container">
-    
+  </div> <!--header --> 
+ 
+    <!--Container start-->
+    <div class="container">
+
     <!-- Navigation -->
     <ul class="nav nav-pills">
       <li class="active"><a href="#">Home</a></li>
@@ -246,7 +262,7 @@ body {
         <!--column 1 of row2-->    
         <div class="col-xs-4">
         <h3><strong>Location &amp; Hours</strong></h3>
-        <p><a href="http://goo.gl/maps/42hLW">711 Music is Life Ave.</a><br>
+        <p><a href="http://goo.gl/maps/42hLW" style="text-decoration:none;">711 Music is Life Ave.</a><br>
         Boston, MA 01226<br>
         (617) 535-5000</p>
         
@@ -264,11 +280,21 @@ body {
             <a href+"">Twitter</a></p>
         </div> <!--col-xs-6-->
         </div> <!--row2-->
+      
+      <!--Audio, Visualizer-->
+      <div class="col-xs-4">
+        <div class="bar-wrapper">
+        <div class="bar">
+        <audio src="Cleveland_Lounge_-_Drowning_Dave_Aude_Drum_Space_Mix_(mp3.pm).mp3" id="audio" controls>HTML5 Audio element not supported</audio>
+        <canvas id="canvas" width="300" height="150"></canvas>
+        </div>
+        </div>
+        </div>
+        </div><!--container end-->
 
-
-    
-   </div><!--container-->
-    <br>
-  <p style="text-align:center;">&copy; All Fictional 2017</p>
+        <br>
+        <br>
+        <p style="text-align:center;">&copy; All Fictional 2017</p>
+        <script src="main.js"></script> 
 </body>
 </html>
